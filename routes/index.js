@@ -15,10 +15,20 @@ router.get('/', time, (req, res) => {
     const message = req.query.mensaje || '';
 
     res.send(`
-        <h1>¡Bienvenido!</h1>
-        <p>La hora actual es: ${req.actualHour}</p>
-        <p>${message}</p>
-        <button onClick="location.href='/endroute'">Entrar</button>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Index</title>
+        </head>
+        <body>
+            <h1>¡Bienvenido!</h1>
+                <p>La hora actual es: ${req.actualHour}</p>
+                <p>${message}</p>
+                <button onClick="location.href='/endroute'">Entrar</button>
+        </body>
+        </html>
         ` )
 })
 
